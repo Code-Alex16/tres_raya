@@ -69,7 +69,6 @@ function verificarGanador() {
         }
     }
 
-    // Check for a tie only if no winner is found
     if (!ganadorEncontrado) {
         let todasLasCajasLlenas = true;
         for (let i = 0; i < cajas.length; i++) {
