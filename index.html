@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tres en Raya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="contenedor-juego">
+        <!-- Área de información -->
+        <div class="panel-info">
+            <h1>Tres en Raya</h1>
+            <div class="jugadores">
+                <label>Jugador X:
+                    <input type="text" id="jugadorX" placeholder="Jugador 1">
+                </label>
+                <span>Puntos: <span id="puntosX">0</span></span>
+            </div>
+            <div class="jugadores">
+                <label>Jugador O: <input type="text" id="jugadorO" placeholder="Jugador 2"></label>
+                <span>Puntos: <span id="puntosO">0</span></span>
+            </div>
+            <button id="reiniciar">Reiniciar Juego</button>
+            <div id="mensajeGanador" style="margin-top: 10px; font-weight: bold;"></div>
+        </div>
+
+        <!-- Área principal del juego -->
+        <div class="area-juego">
+            <div class="arrastrar" id="contenedorX">
+                <div class="cajaArrastre">
+                    <div class="cruz" draggable="true" id="x1"></div>
+                </div>
+                <div class="cajaArrastre">
+                    <div class="cruz" draggable="true" id="x2"></div>
+                </div>
+                <div class="cajaArrastre">
+                    <div class="cruz" draggable="true" id="x3"></div>
+                </div>
+                <div class="cajaArrastre">
+                    <div class="cruz" draggable="true" id="x4"></div>
+                </div>
+                <div class="cajaArrastre">
+                    <div class="cruz" draggable="true" id="x5"></div>
+                </div>
+            </div>
+
+            <div class="tablero">
+                <div class="caja" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+                <div class="caja" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+                <div class="caja" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+                <div class="caja" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+                <div class="caja" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+                <div class="caja" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+                <div class="caja" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+                <div class="caja" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+                <div class="caja" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+            </div>
+
+            <div class="arrastrar" id="contenedor">
+                <div class="cajaArrastre">
+                    <div class="circulo" draggable="true" id="o1"></div>
+                </div>
+                <div class="cajaArrastre">
+                    <div class="circulo" draggable="true" id="o2"></div>
+                </div>
+                <div class="cajaArrastre">
+                    <div class="circulo" draggable="true" id="o3"></div>
+                </div>
+                <div class="cajaArrastre">
+                    <div class="circulo" draggable="true" id="o4"></div>
+                </div>
+                <div class="cajaArrastre">
+                    <div class="circulo" draggable="true" id="o5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

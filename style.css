@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #0085ff, #ff1458);
+}
+
+.contenedor-juego {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.panel-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.jugadores {
+  margin-bottom: 10px;
+}
+
+.area-juego {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tablero {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 5px;
+}
+
+.caja {
+  width: 80px;
+  height: 80px;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  border-radius: 5px;
+}
+
+.arrastrar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cajaArrastre {
+  width: 50px;
+  height: 50px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.cruz::before {
+  content: 'X';
+  font-size: 2em;
+  color: red;
+}
+
+.circulo::before {
+  content: 'O';
+  font-size: 2em;
+  color: blue;
+}
+
+#mensajeGanador {
+  margin-top: 10px;
+  font-weight: bold;
+}
